@@ -1,6 +1,11 @@
 const maxWidth = 960;
 let div = [];
 let columns = 16, rows = 16;
+let rgb1, rgb2, rgb3;
+
+
+console.log(rgb1, rgb2, rgb3);
+
 
 let container = document.querySelector(".container");
 
@@ -14,7 +19,8 @@ let boxWidth = (maxWidth/columns).toFixed(0);
         container.appendChild(div[i]);
         
         div[i].addEventListener("mouseover", (e) => {
-            div[i].style.background = "green";
+            div[i].style.background = `rgb(${+Math.floor(Math.random()*284)},${+Math.floor(Math.random()*284)},${+Math.floor(Math.random()*284)})`;
+            // div[i].style.background = "yellow";
         });
     }
 
@@ -47,7 +53,7 @@ grids.addEventListener("click", (e) => {
         container.appendChild(div[i]);
         
         div[i].addEventListener("mouseover", (e) => {
-            div[i].style.background = "green";
+            div[i].style.background = `rgb(${+Math.floor(Math.random()*284)},${+Math.floor(Math.random()*284)},${+Math.floor(Math.random()*284)})`;;
         });
     }
 });
